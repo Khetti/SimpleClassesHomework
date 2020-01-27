@@ -17,10 +17,10 @@ public class Printer {
         return this.toner;
     }
 
-    public String Print(int pages, int copies) {
+    public String print(int pages, int copies) {
         int total = (pages * copies);
         if (total <= this.paper) {
-            this.paper -= pages;
+            this.paper -= total;
             return "Print Successful";
         } else {
             return "Not Enough Paper";

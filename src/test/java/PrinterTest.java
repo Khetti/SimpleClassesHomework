@@ -24,7 +24,13 @@ public class PrinterTest {
 
     @Test
     public void paperCheckWillPrint(){
-        assertEquals("Print Successful", printer.Print(25, 2));
+        assertEquals("Print Successful", printer.print(25, 2));
+    }
+
+    @Test
+    public void checkPaperLevel(){
+        printer.print(25, 2);
+        assertEquals(50, printer.getPaper());
     }
 
 }
