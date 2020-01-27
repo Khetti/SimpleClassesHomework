@@ -17,8 +17,9 @@ public class Printer {
         return this.toner;
     }
 
-    public String Print(int pages) {
-        if (pages <= this.paper) {
+    public String Print(int pages, int copies) {
+        int total = (pages * copies);
+        if (total <= this.paper) {
             this.paper -= pages;
             return "Print Successful";
         } else {

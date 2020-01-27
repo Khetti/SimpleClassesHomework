@@ -24,7 +24,7 @@ public class PrinterTest {
 
     @Test
     public void paperCheckWillPrint(){
-        assertEquals("Print Successful", printer.Print(50));
+        assertEquals("Print Successful", printer.Print(25, 2));
     }
 
 }
