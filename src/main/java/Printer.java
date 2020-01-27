@@ -16,4 +16,13 @@ public class Printer {
     public Object getToner() {
         return this.toner;
     }
+
+    public String Print(int pages) {
+        if (pages <= this.paper) {
+            this.paper -= pages;
+            return "Print Successful";
+        } else {
+            return "Not Enough Paper";
+        }
+    }
 }

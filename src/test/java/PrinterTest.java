@@ -22,4 +22,9 @@ public class PrinterTest {
         assertEquals(100, printer.getToner());
     }
 
+    @Test
+    public void paperCheckWillPrint(){
+        assertEquals("Print Successful", printer.Print(50));
+    }
+
 }
