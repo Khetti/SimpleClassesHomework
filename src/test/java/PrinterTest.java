@@ -23,14 +23,25 @@ public class PrinterTest {
     }
 
     @Test
-    public void paperCheckWillPrint(){
+    public void checkWillPrint(){
         assertEquals("Print Successful", printer.print(25, 2));
+    }
+
+    @Test
+    public void checkWillNotPrint(){
+        assertEquals("Print Failed", printer.print(25, 5));
     }
 
     @Test
     public void checkPaperLevel(){
         printer.print(25, 2);
         assertEquals(50, printer.getPaper());
+    }
+
+    @Test
+    public void checkTonerLevel(){
+        printer.print(25, 2);
+        assertEquals(50, printer.getToner());
     }
 
 }

@@ -19,11 +19,12 @@ public class Printer {
 
     public String print(int pages, int copies) {
         int total = (pages * copies);
-        if (total <= this.paper) {
+        if (total <= this.paper && total <= this.toner) {
             this.paper -= total;
+            this.toner -= this.paper;
             return "Print Successful";
         } else {
-            return "Not Enough Paper";
+            return "Print Failed";
         }
     }
 }
